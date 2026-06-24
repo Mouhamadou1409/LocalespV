@@ -357,32 +357,32 @@
   min-width: 0;
 }
 .tcf-col {
-  flex: 1; min-width: 170px;
+  flex: 1; min-width: 210px;
   border-radius: 10px; overflow: hidden;
   display: flex; flex-direction: column;
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.08);
 }
 .tcf-header {
-  padding: 1rem .9rem .85rem;
+  padding: 1.2rem 1rem 1rem;
   text-align: center;
   display: flex; flex-direction: column;
   align-items: center; gap: .4rem;
 }
-.tcf-icon { font-size: 1.15rem; line-height: 1; }
+.tcf-icon { font-size: 1.35rem; line-height: 1; }
 .tcf-header h4 {
-  font-size: .6rem; font-weight: 800;
+  font-size: .72rem; font-weight: 800;
   text-transform: uppercase; letter-spacing: 1.5px;
   color: #f5c842; line-height: 1.4; margin: 0;
 }
 .tcf-list {
-  list-style: none; padding: .9rem .9rem;
+  list-style: none; padding: 1rem 1rem;
   margin: 0; display: flex; flex-direction: column;
-  gap: .6rem; flex: 1;
+  gap: .65rem; flex: 1;
 }
 .tcf-list li {
-  display: flex; align-items: flex-start; gap: .45rem;
-  font-size: .63rem; color: rgba(255,255,255,.85); line-height: 1.45;
+  display: flex; align-items: flex-start; gap: .5rem;
+  font-size: .74rem; color: rgba(255,255,255,.85); line-height: 1.5;
 }
 .tcf-list li::before {
   content: '●'; flex-shrink: 0; margin-top: .2em; font-size: .42rem;
@@ -562,8 +562,6 @@
 <div class="topbar">
   <div class="tb-l">
     <span>📍 <strong>Dakar, Sénégal</strong></span>
-    <span>📞 +221 33 824 00 00</span>
-    <span>✉️ contact@madyibrahima4esp2026.com</span>
   </div>
     <div class="tb-r">
     <a href="https://www.esp.sn" target="_blank" rel="noopener noreferrer">esp.sn</a>
@@ -597,7 +595,7 @@
         <li><a href="programme.html">Programme</a></li>
         <li><a href="projets.html">Projets structurants</a></li>
         <li><a href="theorie-du-changement.html" class="active">Théorie du changement</a></li>
-        <li><a href="theorie-du-changement.html#calendrier">Calendrier de mise en oeuvre</a></li>
+        <li><a href="calendrier.html">Calendrier de mise en oeuvre</a></li>
 
       </ul>
     </nav>
@@ -615,7 +613,7 @@
   <a href="programme.html">Programme</a>
   <a href="projets.html">Projets structurants</a>
   <a href="theorie-du-changement.html">Théorie du changement</a>
-  <a href="theorie-du-changement.html#calendrier">Calendrier de mise en oeuvre</a>
+  <a href="calendrier.html">Calendrier de mise en oeuvre</a>
   <div class="mob-nav-actions">
     <a href="index.html#video" class="nav-btn nav-btn-video">&#9654; Notre programme en vidéo</a>
     <a href="documents/programme-complet.pdf" class="nav-btn nav-btn-pdf" download="Programme-ESP-UCAD-2026.pdf" target="_blank" rel="noopener noreferrer">&#128196; Programme PDF</a>
@@ -642,7 +640,7 @@
         <p>Elle établit une <strong>chaîne causale claire</strong> : partant des problèmes identifiés au sein de l'institution, elle décrit les ressources mobilisées, les activités prévues à travers nos 8 axes stratégiques, les extrants concrets produits par les 5 projets structurants, et les résultats attendus à court, moyen et long terme.</p>
         <p>Ce cadre permet à la communauté ESP de <strong>mesurer objectivement nos progrès</strong> tout au long du mandat 2026–2029, grâce à des indicateurs précis définis pour chaque niveau de résultat.</p>
         <div class="vision-feats" style="margin-top:1.5rem">
-          <div class="vfeat"><div class="vfeat-n">7</div><div class="vfeat-t">Axes stratégiques d'intervention</div></div>
+          <div class="vfeat"><div class="vfeat-n">8</div><div class="vfeat-t">Axes stratégiques d'intervention</div></div>
           <div class="vfeat"><div class="vfeat-n">5</div><div class="vfeat-t">Projets structurants mesurables</div></div>
           <div class="vfeat"><div class="vfeat-n">3</div><div class="vfeat-t">Niveaux de résultats</div></div>
           <div class="vfeat"><div class="vfeat-n">36</div><div class="vfeat-t">Mois de mise en œuvre</div></div>
@@ -998,74 +996,6 @@
   </div>
 </section>
 
-<!-- ══ CALENDRIER GANTT ══ -->
-<section class="section tdc-gantt-section" id="calendrier">
-  <div class="container">
-    <div class="section-hd center">
-      <div class="eyebrow">Calendrier de mise en œuvre</div>
-      <h2 class="section-title">Diagramme de Gantt<br>des projets structurants</h2>
-      <p class="section-intro">Planning trimestriel de réalisation des 5 projets structurants sur l'ensemble du mandat 2026 — 2029.</p>
-  </div>
-
-    <p class="gantt-hint">← Faites glisser pour voir le calendrier complet →</p>
-    <div class="gantt-wrap reveal">
-      <table class="gantt" aria-label="Gantt 2026-2029">
-        <thead>
-          <tr>
-            <th style="width:28%">Projet / Extrant</th>
-            <th class="yr" colspan="2">2026</th>
-            <th class="yr" colspan="4">2027</th>
-            <th class="yr" colspan="4">2028</th>
-            <th class="yr" colspan="2">2029</th>
-          </tr>
-          <tr>
-            <th></th>
-            <th>T3</th><th>T4</th>
-            <th>T1</th><th>T2</th><th>T3</th><th>T4</th>
-            <th>T1</th><th>T2</th><th>T3</th><th>T4</th>
-            <th>T1</th><th>T2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="ps-row" colspan="13">PS1 · Gouvernance transparente et efficace</td></tr>
-          <tr><td class="lbl">Manuel des procédures</td><td></td><td><div class="gbar c1" style="width:60%"></div></td><td><div class="gbar c1"></div></td><td><div class="gbar c1"></div></td><td><div class="gbar c1" style="width:50%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Organigramme validé</td><td><div class="gbar c1" style="width:60%"></div></td><td><div class="gbar c1"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Projet d'établissement</td><td></td><td></td><td><div class="gbar c1"></div></td><td><div class="gbar c1"></div></td><td><div class="gbar c1" style="width:60%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Système d'information intégré</td><td></td><td></td><td><div class="gbar c1"></div></td><td><div class="gbar c1"></div></td><td><div class="gbar c1"></div></td><td><div class="gbar c1" style="width:50%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
-          <tr><td class="ps-row" colspan="13">PS2 · Communication &amp; Visibilité</td></tr>
-          <tr><td class="lbl">Structure communication</td><td><div class="gbar c2" style="width:60%"></div></td><td><div class="gbar c2"></div></td><td><div class="gbar c2" style="width:40%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Portail web + outils</td><td></td><td></td><td><div class="gbar c2"></div></td><td><div class="gbar c2"></div></td><td><div class="gbar c2"></div></td><td><div class="gbar c2" style="width:50%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-
-          <tr><td class="ps-row" colspan="13">PS3 · Environnement de travail</td></tr>
-          <tr><td class="lbl">Bureau &amp; salle témoins</td><td><div class="gbar c3" style="width:60%"></div></td><td><div class="gbar c3"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">30% salles aménagées</td><td></td><td></td><td><div class="gbar c3"></div></td><td><div class="gbar c3"></div></td><td><div class="gbar c3"></div></td><td><div class="gbar c3" style="width:50%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Tour recherche + Data center</td><td></td><td></td><td></td><td></td><td></td><td></td><td><div class="gbar c3"></div></td><td><div class="gbar c3"></div></td><td><div class="gbar c3"></div></td><td><div class="gbar c3" style="width:60%"></div></td><td></td><td></td></tr>
-
-          <tr><td class="ps-row" colspan="13">PS4 · Restructuration pédagogique</td></tr>
-          <tr><td class="lbl">Manuel procédures péda.</td><td></td><td></td><td><div class="gbar c4"></div></td><td><div class="gbar c4"></div></td><td><div class="gbar c4" style="width:60%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Classes préparatoires</td><td></td><td></td><td></td><td></td><td></td><td></td><td><div class="gbar c4"></div></td><td><div class="gbar c4"></div></td><td><div class="gbar c4" style="width:60%"></div></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Bimodalité 50% dépts</td><td></td><td></td><td></td><td></td><td></td><td></td><td><div class="gbar c4"></div></td><td><div class="gbar c4"></div></td><td><div class="gbar c4" style="width:50%"></div></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Bimodalité 100% + filières</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><div class="gbar c4"></div></td><td><div class="gbar c4" style="width:70%"></div></td></tr>
-
-          <tr><td class="ps-row" colspan="13">PS5 · Recherche, Innovation &amp; Entrepreneuriat</td></tr>
-          <tr><td class="lbl">Dispositif veille chercheurs</td><td></td><td></td><td><div class="gbar c5"></div></td><td><div class="gbar c5"></div></td><td><div class="gbar c5"></div></td><td><div class="gbar c5" style="width:50%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">Forge + financement amorçage</td><td></td><td></td><td><div class="gbar c5"></div></td><td><div class="gbar c5"></div></td><td><div class="gbar c5"></div></td><td><div class="gbar c5" style="width:60%"></div></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-          <tr><td class="lbl">CRIE + Réseau alumni</td><td></td><td></td><td></td><td></td><td></td><td></td><td><div class="gbar c5"></div></td><td><div class="gbar c5"></div></td><td><div class="gbar c5" style="width:60%"></div></td><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
-  </div>
-
-    <!-- Légende Gantt -->
-    <div class="gantt-legend reveal">
-      <div class="gantt-legend-item"><span class="gantt-legend-dot c1"></span>PS1 · Gouvernance</div>
-      <div class="gantt-legend-item"><span class="gantt-legend-dot c2"></span>PS2 · Communication</div>
-      <div class="gantt-legend-item"><span class="gantt-legend-dot c3"></span>PS3 · Environnement</div>
-      <div class="gantt-legend-item"><span class="gantt-legend-dot c4"></span>PS4 · Pédagogie</div>
-      <div class="gantt-legend-item"><span class="gantt-legend-dot c5"></span>PS5 · Recherche</div>
-  </div>
-  </div>
-</section>
 
 <!-- ══ FOOTER ══ -->
 <footer>
@@ -1085,7 +1015,7 @@
         <li><a href="programme.html">8 Axes Stratégiques</a></li>
         <li><a href="projets.html">Projets structurants</a></li>
         <li><a href="theorie-du-changement.html">Théorie du changement</a></li>
-        <li><a href="theorie-du-changement.html#calendrier">Calendrier de mise en oeuvre</a></li>
+        <li><a href="calendrier.html">Calendrier de mise en oeuvre</a></li>
       </ul>
   </div>
     <div class="footer-col">
