@@ -204,9 +204,11 @@ async function handleSubmit(e) {
   btn.textContent = 'Envoi en cours…';
 
   try {
-    // Remplacez VOTRE_ID_FORMSPREE par votre vrai ID Formspree
-    // Créez un compte sur https://formspree.io et récupérez votre endpoint
     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/VOTRE_ID_FORMSPREE';
+
+    if (FORMSPREE_ENDPOINT.includes('VOTRE_ID_FORMSPREE')) {
+      throw new Error('Formulaire non configuré. Veuillez nous contacter directement par e-mail : contact@madyibrahima4esp2026.com');
+    }
 
     const response = await fetch(FORMSPREE_ENDPOINT, {
       method: 'POST',
