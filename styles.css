@@ -124,9 +124,9 @@ h1,h2,h3,h4,h5,h6 {
 .main-nav { display:flex; list-style:none; align-items:center; gap:.1rem; flex-wrap:nowrap; }
 .main-nav a {
   color: var(--text-mid);
-  font-size: clamp(.82rem, .9vw, .95rem);
+  font-size: clamp(.92rem, 1.05vw, 1.08rem);
   font-weight: 600;
-  padding: .55rem .75rem;
+  padding: .65rem .9rem;
   border-radius: var(--r);
   transition: color .15s, background .15s;
   white-space: nowrap;
@@ -1554,13 +1554,21 @@ html.menu-open body { overflow: clip; }
 .gantt-section { background:var(--white); }
 .gantt-wrap { margin-top:3rem; overflow-x:auto; border:1px solid var(--gray-200); border-radius:var(--r-lg); box-shadow:var(--shadow); }
 .gantt { width:100%; min-width:900px; border-collapse:collapse; font-size:var(--text-xs); }
-.gantt thead tr:first-child th { background:var(--esp-navy); color:var(--white); padding:.7rem .9rem; font-weight:700; font-size:var(--text-xs); text-align:left; }
+/* En-tête rangée 1 (années) — collante verticalement */
+.gantt thead tr:first-child th { background:var(--esp-navy); color:var(--white); padding:.7rem .9rem; font-weight:700; font-size:var(--text-xs); text-align:left; position:sticky; top:0; z-index:4; }
 .gantt thead tr:first-child th.yr { background:var(--esp-blue); text-align:center; font-size:var(--text-xs); border-left:1px solid rgba(255,255,255,.15); }
-.gantt thead tr:nth-child(2) th { background:var(--esp-navy-mid); color:rgba(255,255,255,.85); padding:.4rem; font-weight:600; font-size:11px; text-align:center; border-left:1px solid rgba(255,255,255,.1); }
-.gantt td { position:relative; padding:.55rem .9rem; border-bottom:1px solid var(--gray-200); font-size:var(--text-xs); vertical-align:middle; }
-.gantt td.lbl { color:var(--text-mid); }
-.gantt td.ps-row { background:#1b3a6b; color:#fff; font-weight:700; font-size:var(--text-xs); padding:.7rem .9rem; letter-spacing:.01em; }
+/* Coin supérieur gauche : collant horizontalement ET verticalement */
+.gantt thead tr:first-child th:first-child { position:sticky; top:0; left:0; z-index:6; }
+/* En-tête rangée 2 (T1/T2…) — collante juste sous la rangée 1 */
+.gantt thead tr:nth-child(2) th { background:var(--esp-navy-mid); color:rgba(255,255,255,.85); padding:.4rem; font-weight:600; font-size:11px; text-align:center; border-left:1px solid rgba(255,255,255,.1); position:sticky; top:42px; z-index:4; }
+.gantt thead tr:nth-child(2) th:first-child { position:sticky; top:42px; left:0; z-index:6; background:var(--esp-navy-mid); }
+/* Cellules de données : grille visible */
+.gantt td { position:relative; padding:.55rem .9rem; border-bottom:1px solid var(--gray-200); border-left:1px solid var(--gray-200); font-size:var(--text-xs); vertical-align:middle; }
+/* Colonne label : collante horizontalement */
+.gantt td.lbl { color:var(--text-mid); position:sticky; left:0; z-index:2; background:var(--white); border-left:none; border-right:2px solid var(--gray-300); box-shadow:3px 0 6px rgba(0,0,0,.08); }
+.gantt td.ps-row { background:#1b3a6b; color:#fff; font-weight:700; font-size:var(--text-xs); padding:.7rem .9rem; letter-spacing:.01em; position:sticky; left:0; z-index:2; border-left:none; box-shadow:3px 0 8px rgba(0,0,0,.05); }
 .gantt tr:hover td:not(.ps-row) { background:var(--esp-blue-bg); }
+.gantt tr:hover td.lbl { background:var(--esp-blue-bg); }
 .gantt .gbar { position:absolute; top:5px; bottom:5px; left:5px; width:calc(100% - 10px); height:auto; border-radius:3px; }
 .gantt .c1 { background:var(--esp-navy); }
 .gantt .c2 { background:var(--esp-blue); }
@@ -1621,6 +1629,43 @@ html.menu-open body { overflow: clip; }
 .btn-submit:disabled { opacity:.6; cursor:not-allowed; transform:none; }
 .form-note { font-size:var(--text-xs); color:var(--text-mid); margin-top:1rem; text-align:center; }
 .form-note a { color:var(--esp-navy); font-weight:600; }
+
+/* ════════════════════════════════════
+   FOOTER — NAVIGATION PAGE SUIVANTE
+════════════════════════════════════ */
+.footer-next-bar {
+  max-width: 1280px;
+  margin: 0 auto 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .4rem;
+}
+.fnb-label {
+  font-size: .7rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.35);
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+}
+.fnb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--esp-blue);
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  transition: color .18s, gap .18s;
+}
+.fnb-arrow { display: inline-block; transition: transform .18s ease; }
+.fnb-link:hover { color: #fff; gap: .7rem; }
+.fnb-link:hover .fnb-arrow { transform: translateX(4px); }
+@media(max-width:600px) {
+  .footer-next-bar { gap: .3rem; }
+}
 
 /* ════════════════════════════════════
    FOOTER
@@ -2083,8 +2128,8 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
   /* Burger caché sur desktop */
   .burger { display: none !important; }
   .main-nav { width: 100%; gap: .15rem; flex-wrap: wrap; }
-  .main-nav a { font-size: 1rem; font-weight: 600; padding: .6rem .85rem; white-space: nowrap; }
-  .main-nav a.cta { padding: .6rem 1.2rem; }
+  .main-nav a { font-size: 1.08rem; font-weight: 600; padding: .7rem 1rem; white-space: nowrap; }
+  .main-nav a.cta { padding: .7rem 1.3rem; }
 }
 
 @media(max-width:950px) {
@@ -2213,11 +2258,7 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
   .gal-item.gal-wide-bot .gal-theme-sub   { display: none; }
   .gal-item.gal-wide-bot .gal-num-inline  { font-size: 1.3rem; }
   .gal-item.gal-wide-bot .gal-icon-inline { font-size: 1.3rem; }
-  .gantt thead tr:first-child th:first-child { position:sticky; left:0; z-index:4; }
-  .gantt thead tr:nth-child(2) th:first-child { position:sticky; left:0; z-index:4; background:var(--esp-navy-mid); }
-  .gantt td.lbl { min-width:130px; max-width:130px; white-space:normal; line-height:1.35; position:sticky; left:0; z-index:2; background:var(--white); box-shadow:3px 0 8px rgba(0,0,0,.07); }
-  .gantt tr:hover td.lbl { background:var(--esp-blue-bg); }
-  .gantt td.ps-row { position:sticky; left:0; z-index:2; box-shadow:3px 0 8px rgba(0,0,0,.05); }
+  .gantt td.lbl { min-width:130px; max-width:130px; white-space:normal; line-height:1.35; }
   .gantt .gbar  { top:4px; bottom:4px; left:4px; width:calc(100% - 8px); }
   .page-banner  { padding:0 6% .9rem; }
   .page-banner-title { font-size:1.4rem; }
@@ -2311,8 +2352,8 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
   .section      { padding:1.8rem 3%; }
   .hero-btns    { gap:.5rem; }
   .cand-card    { grid-template-rows:3px 240px 1fr; }
-  .stats-grid   { gap:.5rem; }
-  .stat-num     { font-size:1.5rem; }
+  .stats-grid   { grid-template-columns:repeat(2,1fr); gap:.5rem; }
+  .stat-num     { font-size:1.5rem; width:64px; height:64px; }
 }
 
 /* ── Tablettes paysage (768px – 1024px) ── */
