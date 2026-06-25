@@ -304,13 +304,7 @@ function initCounters() {
 }
 
 /* ── Garde documents non disponibles ── */
-const DOC_UNAVAILABLE = [
-  'documents/cv-ibrahima-fall.pdf',
-  'documents/cv-mady-cisse.pdf',
-  'documents/presentation.pdf',
-  'documents/programme-complet.pdf',
-  'documents/theorie-du-changement.pdf'
-];
+const DOC_UNAVAILABLE = [];
 
 function showDocToast() {
   const existing = document.getElementById('doc-toast');
