@@ -105,28 +105,28 @@ h1,h2,h3,h4,h5,h6 {
 .header-inner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: .9rem 2% .9rem 1.5%;
+  padding: .9rem 2% .9rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: .8rem;
 }
-.brand { display: flex; align-items: center; gap: 12px; min-width:0; overflow:hidden; }
+.brand { display: flex; align-items: center; gap: 16px; min-width:0; overflow:hidden; }
 .brand-logo {
-  height: 48px; width: auto; flex-shrink: 0;
+  height: 62px; width: auto; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
 }
-.brand-logo img { height: 48px; width: auto; object-fit: contain; display: block; }
-.brand-logo-text { font-size: .95rem; font-weight: 800; color: var(--white); letter-spacing: 1px; }
+.brand-logo img { height: 62px; width: auto; object-fit: contain; display: block; }
+.brand-logo-text { font-size: 1.05rem; font-weight: 800; color: var(--white); letter-spacing: 1px; }
 .brand-text { display:flex; flex-direction:column; min-width:0; overflow:hidden; }
-.brand-name { font-size: var(--text-sm); font-weight: 700; color: #1D2769; line-height: 1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.brand-sub { font-size: var(--text-xs); color: #1D2769; margin-top: 2px; font-family: Georgia, 'Times New Roman', serif; font-style: italic; letter-spacing: .3px; }
+.brand-name { font-size: 1.12rem; font-weight: 700; color: #1D2769; line-height: 1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.brand-sub { font-size: .92rem; color: #1D2769; margin-top: 2px; font-family: Georgia, 'Times New Roman', serif; font-style: italic; letter-spacing: .3px; }
 .main-nav { display:flex; list-style:none; align-items:center; gap:.1rem; flex-wrap:nowrap; }
 .main-nav a {
   color: var(--text-mid);
-  font-size: clamp(.92rem, 1.05vw, 1.08rem);
+  font-size: clamp(1.08rem, 1.3vw, 1.32rem);
   font-weight: 600;
-  padding: .65rem .9rem;
+  padding: .65rem 1rem;
   border-radius: var(--r);
   transition: color .15s, background .15s;
   white-space: nowrap;
@@ -1641,6 +1641,7 @@ html.menu-open body { overflow: clip; }
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: .4rem;
 }
 .fnb-label {
@@ -2080,8 +2081,9 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
 ════════════════════════════════════ */
 /* ── Mobile : burger ── */
 @media(max-width:999px) {
-  .main-nav { display:none; }
-  .burger   { display:flex; }
+  .main-nav     { display:none; }
+  .burger       { display:flex; }
+  .header-inner { padding:.75rem 4%; }
 }
 
 /* ── Desktop ≥1000px : header 2 lignes (identité / menu) ── */
@@ -2095,7 +2097,7 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
     grid-template-rows:    auto auto;
     align-items:           center;
     gap:                   0;
-    padding:               .55rem 5% .55rem 2%;
+    padding:               .55rem 5% .55rem 1.5%;
   }
   /* Ligne 1 col 1 — logo + titre + slogan */
   .brand {
@@ -2105,8 +2107,8 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
     width:          auto;
   }
   .brand-text { display: flex; max-width: none; }
-  .brand-name { font-size: .82rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .brand-sub  { display: block; font-size: .68rem; }
+  .brand-name { font-size: .92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand-sub  { display: block; font-size: .76rem; }
   /* Ligne 1 col 2 — boutons Vidéo + PDF */
   .header-cta {
     grid-column:    2;
@@ -2271,16 +2273,16 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
 /* ── Header / brand sur écrans moyens ── */
 @media(max-width:900px) {
   .brand-sub   { display:none; }
-  .brand-name  { font-size:.8rem; }
+  .brand-name  { font-size:.9rem; }
   .header-inner{ padding:.75rem 4%; gap:1rem; }
   .topbar      { padding:.4rem 4%; }
 }
 
 /* ── Brand text truncation sur petits écrans ── */
 @media(max-width:600px) {
-  .brand-name  { font-size:.72rem; max-width:100%; white-space:normal; overflow:visible; text-overflow:unset; line-height:1.35; }
-  .brand-logo  { height:38px; }
-  .brand-logo img { height:38px; }
+  .brand-name  { font-size:.8rem; max-width:100%; white-space:normal; overflow:visible; text-overflow:unset; line-height:1.35; }
+  .brand-logo  { height:46px; }
+  .brand-logo img { height:46px; }
   .header-inner{ padding:.65rem 4%; }
 }
 
@@ -2572,7 +2574,7 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
 
 /* ── Desktop 1000–1300px : 7 items nav trop larges, compactage ── */
 @media(min-width:1000px) and (max-width:1300px) {
-  .main-nav a  { font-size:.82rem; padding:.55rem .58rem; white-space:nowrap; }
+  .main-nav a  { font-size:.97rem; padding:.55rem .65rem; white-space:nowrap; }
   .nav-btn     { font-size:.75rem; padding:.42rem .7rem; }
   .vision-grid { gap:2.5rem; }
 }
@@ -2580,8 +2582,8 @@ footer { background: #1D2769; color: var(--white); padding: 4rem 6% 2rem; border
 /* ── Desktop 1000–1150px : masquer le slogan marque pour libérer espace ── */
 @media(min-width:1000px) and (max-width:1150px) {
   .brand-sub  { display:none; }
-  .brand-name { font-size:.72rem; }
-  .header-inner { padding:.55rem 1.8% .55rem 1%; }
+  .brand-name { font-size:.8rem; }
+  .header-inner { padding:.55rem 1.8% .55rem .8%; }
 }
 
 /* ── Tablette portrait 600–768px : ajustements intermédiaires ── */
