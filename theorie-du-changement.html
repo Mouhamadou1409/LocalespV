@@ -394,33 +394,33 @@
 }
 /* ── Scroll hint ── */
 .tcf-scroll-hint {
-  display: flex; align-items: center; justify-content: center; gap: .6rem;
-  margin-bottom: .9rem;
-  color: rgba(255,255,255,.45);
-  font-size: .68rem; font-weight: 600; letter-spacing: .5px;
+  display: flex; align-items: center; justify-content: center; gap: .8rem;
+  margin-bottom: 1.2rem;
+  color: rgba(255,255,255,.85);
+  font-size: 1rem; font-weight: 700; letter-spacing: .8px;
   user-select: none;
 }
 .tcf-scroll-hint .tcf-sh-icon {
-  display: flex; align-items: center; gap: 4px;
+  display: flex; align-items: center; gap: 6px;
 }
 .tcf-scroll-hint .sh-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: rgba(255,255,255,.3);
+  width: 11px; height: 11px; border-radius: 50%;
+  background: rgba(255,255,255,.5);
   animation: shDot 1.6s ease-in-out infinite;
 }
 .tcf-scroll-hint .sh-dot:nth-child(2) { animation-delay: .2s; }
 .tcf-scroll-hint .sh-dot:nth-child(3) { animation-delay: .4s; }
 @keyframes shDot {
-  0%,100% { background: rgba(255,255,255,.2); transform: scale(1); }
-  50%      { background: #06AEFD; transform: scale(1.35); }
+  0%,100% { background: rgba(255,255,255,.3); transform: scale(1); }
+  50%      { background: #06AEFD; transform: scale(1.45); }
 }
 .tcf-scroll-hint .sh-arrow {
-  font-size: .9rem; animation: shArrow 1.6s ease-in-out infinite;
+  font-size: 1.4rem; animation: shArrow 1.6s ease-in-out infinite;
   display: inline-block;
 }
 @keyframes shArrow {
-  0%,100% { transform: translateX(0); opacity:.4; }
-  50%      { transform: translateX(5px); opacity:1; }
+  0%,100% { transform: translateX(0); opacity:.6; }
+  50%      { transform: translateX(7px); opacity:1; }
 }
 /* Toujours visible — mobile et ordinateur */
 
@@ -616,7 +616,7 @@
   <a href="calendrier.html">Calendrier de mise en oeuvre</a>
   <div class="mob-nav-actions">
     <a href="index.html#video" class="nav-btn nav-btn-video">&#9654; Notre programme en vidéo</a>
-    <a href="documents/programme-complet.pdf" class="nav-btn nav-btn-pdf" download="Programme-ESP-UCAD-2026.pdf" target="_blank" rel="noopener noreferrer">&#128196; Notre programme en PDF</a>
+    <a href="programme-complet.pdf" class="nav-btn nav-btn-pdf" download="Programme-ESP-UCAD-2026.pdf" target="_blank" rel="noopener noreferrer">&#128196; Notre programme en PDF</a>
   </div>
 </nav>
 
@@ -787,9 +787,7 @@
           <h4>Impact<br>durable</h4>
   </div>
         <ul class="tcf-list">
-          <li>L'ESP se positionne au Sénégal et en Afrique comme établissement leader de l'ingénierie et du management</li>
-          <li>Valorisation du savoir par l'industrie, les services et l'entrepreneuriat</li>
-          <li>Au service des organisations publiques et privées</li>
+          <li>L'ESP se positionne au Sénégal et en Afrique comme établissement leader de l'ingénierie et du management, valorisant le savoir par l'industrie, les services et l'entrepreneuriat au service des organisations publiques et privées</li>
         </ul>
   </div>
   </div>
@@ -999,6 +997,10 @@
 
 <!-- ══ FOOTER ══ -->
 <footer>
+  <div class="footer-next-bar">
+    <span class="fnb-label">Page suivante</span>
+    <a href="calendrier.html" class="fnb-link">Calendrier de mise en &oelig;uvre <span class="fnb-arrow">&#8594;</span></a>
+  </div>
   <div class="footer-top">
     <div>
       <div class="foot-name">Pr Mady CISSE &amp; Pr Ibrahima FALL</div>
@@ -1047,6 +1049,7 @@
       <a href="#" class="soc" aria-label="YouTube" rel="noopener noreferrer">&#9654;</a>
   </div>
   </div>
+
 </footer>
 
 <script src="main.js" defer></script>
